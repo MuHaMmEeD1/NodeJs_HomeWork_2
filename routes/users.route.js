@@ -19,7 +19,7 @@ router.get("/", getAllUsers);
 router.get("/user/:id", getUserById);
 
 // GET current user profile (protected)
-router.get("/user/me", protectRoute, getCurrentUser);
+router.get("/me", protectRoute, getCurrentUser);
 
 // POST create new user (public)
 router.post("/add/", protectRoute, createUser);
