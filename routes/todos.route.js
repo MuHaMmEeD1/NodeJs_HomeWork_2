@@ -1,24 +1,32 @@
-import express from 'express'
-import { getAllTodos, getTodoById, createTodo, updateTodo, deleteTodo } from '../controllers/todos.controller.js';
-import { protectRoute } from '../middleware/protectRoute.js';
-import { checkAdmin } from '../middleware/checkAdmin.js';
+import express from "express";
+import {
+  getAllTodos,
+  getTodoById,
+  createTodo,
+  updateTodo,
+  deleteTodo,
+  getMyAllTodos,
+} from "../controllers/todos.controller.js";
+import { protectRoute } from "../middleware/protectRoute.js";
+import { checkAdmin } from "../middleware/checkAdmin.js";
 
 const router = express.Router();
 
 // GET method
-router.get('/', protectRoute, getAllTodos);
+router.get("/", protectRoute, getAllTodos);
 
 // GET by id method
-router.get('/todo/:id', getTodoById);
+router.get("/todo/:id", getTodoById);
+
+router.get("/my-todos/", getMyAllTodos);
 
 // POST method
-router.post('/add', createTodo);
+router.post("/add", createTodo);
 
 // PUT method
-router.put('/edit/:id', updateTodo);
+router.put("/edit/:id", updateTodo);
 
 // DELETE method
-router.delete('/delete/:id', protectRoute, checkAdmin, deleteTodo);
+router.delete("/delete/:id", protectRoute, checkAdmin, deleteTodo);
 
-
-export default router
+export default router;

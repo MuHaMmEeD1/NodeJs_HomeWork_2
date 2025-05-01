@@ -1,0 +1,6 @@
+[2025-05-01 12:27:46] 200 INFO /api/todos/: All todos fetched successfully
+[2025-05-01 12:28:14] 500 ERROR /api/todos/todo/4334: Error fetching todo by ID: Cast to ObjectId failed for value "4334" (type string) at path "_id" for model "Todo"
+[2025-05-01 12:28:47] 400 ERROR /api/todos/edit/fjjfjf: Error updating todo: Cast to ObjectId failed for value "fjjfjf" (type string) at path "_id" for model "Todo"
+[2025-05-01 12:30:25] 400 ERROR /api/todos/add: Error creating todo: Todo validation failed: title: Title is required, description: Description is required
+[2025-05-01 12:32:27] 500 ERROR /api/todos/delete/rrr: Error deleting todo: Cast to ObjectId failed for value "rrr" (type string) at path "_id" for model "Todo"
+[2025-05-01 12:34:12] 200 INFO /api/todos/my-todos: All todos fetched for user muhammad@gmail.com
